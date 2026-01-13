@@ -21,225 +21,228 @@
 
     <section>
       <div>
-        <div
-          id="featured-work-section"
-          class="w-full h-screen flex justify-center items-center bg-black overflow-hidden relative"
-        >
+        <div id="featured-work-section" class="w-full h-screen p-7">
           <div
-            class="flex w-[90%] max-w-[1400px] h-[80vh] relative anim-container"
+            class="bg-black flex flex-col justify-center items-center overflow-hidden relative rounded-3xl h-full max-w-[1100px] mx-auto pt-14 px-12"
           >
-            <!-- Floating Titles (Left Column) -->
-            <div
-              class="w-[40%] pr-16 block relative z-10 h-[60vh] overflow-hidden my-auto border-r border-white/10 titles-column"
-            >
-              <h2
-                class="absolute -top-32 left-0 text-6xl leading-tight font-normal tracking-tight"
-              >
-                Featured<br />AI Work
-              </h2>
-              <div
-                class="flex flex-col gap-16 absolute top-0 left-0 w-full titles-list"
-              >
-                <div class="client-title active" data-target="item-1">
-                  <h3
-                    class="heading"
-                    >Lorem ipsum, dolor sit amet consectetur adipisicing</h3
-                  >
-                  <span class="sub-heading">Honor</span>
-                </div>
-                <div class="client-title" data-target="item-2">
-                  <h3
-                    class="heading"
-                    >AI Helps Create Realistic B2B Videos in Under a Week</h3
-                  >
-                  <span class="sub-heading">WUND+</span>
-                </div>
-                <div class="client-title" data-target="item-3">
-                  <h3
-                    class="heading"
-                    >Lorem ipsum, dolor sit amet consectetur adipisicing</h3
-                  >
-                  <span class="sub-heading">Simbiot</span>
-                </div>
-                <div class="client-title" data-target="item-4">
-                  <h3
-                    class="heading"
-                    >Lorem ipsum, dolor sit amet consectetur adipisicing</h3
-                  >
-                  <span class="sub-heading">FashionAI</span>
-                </div>
+            <div class="flex gap-1">
+              <div class="w-1/2">
+                <h2 class="text-white text-[60px]">Featured <br> AI Work</h2>
               </div>
-              <!-- Progress bar could be added here if needed -->
+              <div class="w-1/2">
+                <p class="text-white">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Pariatur numquam sit mollitia, doloremque a minima sed
+                  repellat voluptas voluptate voluptatem dignissimos aperiam
+                  quisquam, accusamus consequatur culpa fugit! Debitis, sunt ex?
+                </p>
+              </div>
             </div>
-
-            <!-- Scrolling Content (Right Column) -->
-            <div
-              class="w-[60%] flex flex-col gap-[10vh] relative will-change-transform content-column"
-            >
-              <!-- GROUP 1: Honor (Title Index 0) -->
-              <!-- Item 1 -->
-              <div class="work-item" id="item-1" data-title-index="0">
-                <div class="w-full relative">
-                  <div
-                    class="image-container"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1760708368766-1d36cd72591e?q=80&w=2000&auto=format&fit=crop"
-                      alt="Honor 1"
-                      class="w-full h-full object-cover block"
-                    />
+            <div class="flex gap-1 w-full h-full relative anim-container overflow-hidden">
+              <!-- Floating Titles (Left Column) -->
+              <div
+                class="w-1/2 pr-16 block relative z-10 h-[60vh]  my-auto border-r border-white/10 titles-column"
+              >
+                <div
+                  class="flex flex-col gap-16 absolute top-0 left-0 w-full titles-list"
+                >
+                  <div class="client-title active" data-target="item-1">
+                    <h3 class="heading">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing
+                    </h3>
+                    <span class="sub-heading">Honor</span>
                   </div>
-                  <div class="mt-6 flex justify-between items-end">
-                    <p class="w-[70%] text-xl font-normal m-0 leading-relaxed">
+                  <div class="client-title" data-target="item-2">
+                    <h3 class="heading">
                       AI Helps Create Realistic B2B Videos in Under a Week
-                    </p>
-                    <button class="cta-button">Read More</button>
+                    </h3>
+                    <span class="sub-heading">WUND+</span>
+                  </div>
+                  <div class="client-title" data-target="item-3">
+                    <h3 class="heading">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing
+                    </h3>
+                    <span class="sub-heading">Simbiot</span>
+                  </div>
+                  <div class="client-title" data-target="item-4">
+                    <h3 class="heading">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing
+                    </h3>
+                    <span class="sub-heading">FashionAI</span>
                   </div>
                 </div>
+                <!-- Progress bar could be added here if needed -->
               </div>
 
-              <!-- Item 2 -->
-              <div class="work-item" id="item-2" data-title-index="0">
-                <div class="w-full relative">
-                  <div
-                    class="image-container"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop"
-                      alt="Honor 2"
-                      class="w-full h-full object-cover block"
-                    />
-                  </div>
-                  <div class="mt-6 flex justify-between items-end">
-                    <p class="w-[70%] text-xl font-normal m-0 leading-relaxed">
-                      Leading the Charge in Generative AI Advertising
-                    </p>
-                    <button class="cta-button">Read More</button>
+              <!-- Scrolling Content (Right Column) -->
+              <div
+                class="w-1/2 flex flex-col gap-[10vh] relative will-change-transform content-column"
+              >
+                <!-- GROUP 1: Honor (Title Index 0) -->
+                <!-- Item 1 -->
+                <div class="work-item" id="item-1" data-title-index="0">
+                  <div class="w-full relative">
+                    <div class="image-container">
+                      <img
+                        src="https://images.unsplash.com/photo-1760708368766-1d36cd72591e?q=80&w=2000&auto=format&fit=crop"
+                        alt="Honor 1"
+                        class=""
+                      />
+                    </div>
+                    <div class="mt-6 flex justify-between items-end">
+                      <p
+                        class="w-[70%] text-xl font-normal m-0 leading-relaxed"
+                      >
+                        AI Helps Create Realistic B2B Videos in Under a Week
+                      </p>
+                      <button class="cta-button">Read More</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Item 3 -->
-              <div class="work-item" id="item-3" data-title-index="0">
-                <div class="w-full relative">
-                  <div
-                    class="image-container"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop"
-                      alt="Honor 3"
-                      class="w-full h-full object-cover block"
-                    />
-                  </div>
-                  <div class="mt-6 flex justify-between items-end">
-                    <p class="w-[70%] text-xl font-normal m-0 leading-relaxed">
-                      The AI Tutor Who Redefined Finance Education
-                    </p>
-                    <button class="cta-button">Read More</button>
+                <!-- Item 2 -->
+                <div class="work-item" id="item-2" data-title-index="0">
+                  <div class="w-full relative">
+                    <div class="image-container">
+                      <img
+                        src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop"
+                        alt="Honor 2"
+                        class=""
+                      />
+                    </div>
+                    <div class="mt-6 flex justify-between items-end">
+                      <p
+                        class="w-[70%] text-xl font-normal m-0 leading-relaxed"
+                      >
+                        Leading the Charge in Generative AI Advertising
+                      </p>
+                      <button class="cta-button">Read More</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- Item 4 (Last of Honor) -->
-              <div class="work-item" id="item-4" data-title-index="0">
-                <div class="w-full relative">
-                  <div
-                    class="image-container"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2000&auto=format&fit=crop"
-                      alt="Honor 4"
-                      class="w-full h-full object-cover block"
-                    />
-                  </div>
-                  <div class="mt-6 flex justify-between items-end">
-                    <p class="w-[70%] text-xl font-normal m-0 leading-relaxed">
-                      Virtual Try-Ons Revolutionizing Online Shopping
-                    </p>
-                    <button class="cta-button">Read More</button>
+                <!-- Item 3 -->
+                <div class="work-item" id="item-3" data-title-index="0">
+                  <div class="w-full relative">
+                    <div class="image-container">
+                      <img
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop"
+                        alt="Honor 3"
+                        class=""
+                      />
+                    </div>
+                    <div class="mt-6 flex justify-between items-end">
+                      <p
+                        class="w-[70%] text-xl font-normal m-0 leading-relaxed"
+                      >
+                        The AI Tutor Who Redefined Finance Education
+                      </p>
+                      <button class="cta-button">Read More</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- GROUP 2: WUND+ (Title Index 1) -->
-              <div class="work-item" id="item-5" data-title-index="1">
-                <div class="w-full relative">
-                  <div
-                    class="image-container"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
-                      alt="Wundi 1"
-                      class="w-full h-full object-cover block"
-                    />
-                  </div>
-                  <div class="mt-6 flex justify-between items-end">
-                    <p class="w-[70%] text-xl font-normal m-0 leading-relaxed">
-                      Automating Creative Workflows at Scale
-                    </p>
-                    <button class="cta-button">Read More</button>
+                <!-- Item 4 (Last of Honor) -->
+                <div class="work-item" id="item-4" data-title-index="0">
+                  <div class="w-full relative">
+                    <div class="image-container">
+                      <img
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2000&auto=format&fit=crop"
+                        alt="Honor 4"
+                        class=""
+                      />
+                    </div>
+                    <div class="mt-6 flex justify-between items-end">
+                      <p
+                        class="w-[70%] text-xl font-normal m-0 leading-relaxed"
+                      >
+                        Virtual Try-Ons Revolutionizing Online Shopping
+                      </p>
+                      <button class="cta-button">Read More</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="work-item" id="item-6" data-title-index="1">
-                <div class="w-full relative">
-                  <div
-                    class="image-container"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop"
-                      alt="Wundi 2"
-                      class="w-full h-full object-cover block"
-                    />
-                  </div>
-                  <div class="mt-6 flex justify-between items-end">
-                    <p class="w-[70%] text-xl font-normal m-0 leading-relaxed">
-                      Next-Gen Content Production Engine
-                    </p>
-                    <button class="cta-button">Read More</button>
+                <!-- GROUP 2: WUND+ (Title Index 1) -->
+                <div class="work-item" id="item-5" data-title-index="1">
+                  <div class="w-full relative">
+                    <div class="image-container">
+                      <img
+                        src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
+                        alt="Wundi 1"
+                        class=""
+                      />
+                    </div>
+                    <div class="mt-6 flex justify-between items-end">
+                      <p
+                        class="w-[70%] text-xl font-normal m-0 leading-relaxed"
+                      >
+                        Automating Creative Workflows at Scale
+                      </p>
+                      <button class="cta-button">Read More</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- GROUP 3: Simbiot (Title Index 2) -->
-              <div class="work-item" id="item-7" data-title-index="2">
-                <div class="w-full relative">
-                  <div
-                    class="image-container"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=2000&auto=format&fit=crop"
-                      alt="Simbiot 1"
-                      class="w-full h-full object-cover block"
-                    />
-                  </div>
-                  <div class="mt-6 flex justify-between items-end">
-                    <p class="w-[70%] text-xl font-normal m-0 leading-relaxed">
-                      Financial Data Analysis with LLMs
-                    </p>
-                    <button class="cta-button">Read More</button>
+                <div class="work-item" id="item-6" data-title-index="1">
+                  <div class="w-full relative">
+                    <div class="image-container">
+                      <img
+                        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop"
+                        alt="Wundi 2"
+                        class="w-full h-full object-cover block"
+                      />
+                    </div>
+                    <div class="mt-6 flex justify-between items-end">
+                      <p
+                        class="w-[70%] text-xl font-normal m-0 leading-relaxed"
+                      >
+                        Next-Gen Content Production Engine
+                      </p>
+                      <button class="cta-button">Read More</button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <!-- GROUP 4: FashionAI (Title Index 3) -->
-              <div class="work-item" id="item-8" data-title-index="3">
-                <div class="w-full relative">
-                  <div
-                    class="image-container"
-                  >
-                    <img
-                      src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2000&auto=format&fit=crop"
-                      alt="FashionAI 1"
-                      class="w-full h-full object-cover block"
-                    />
+                <!-- GROUP 3: Simbiot (Title Index 2) -->
+                <div class="work-item" id="item-7" data-title-index="2">
+                  <div class="w-full relative">
+                    <div class="image-container">
+                      <img
+                        src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=2000&auto=format&fit=crop"
+                        alt="Simbiot 1"
+                        class="w-full h-full object-cover block"
+                      />
+                    </div>
+                    <div class="mt-6 flex justify-between items-end">
+                      <p
+                        class="w-[70%] text-xl font-normal m-0 leading-relaxed"
+                      >
+                        Financial Data Analysis with LLMs
+                      </p>
+                      <button class="cta-button">Read More</button>
+                    </div>
                   </div>
-                  <div class="mt-6 flex justify-between items-end">
-                    <p class="w-[70%] text-xl font-normal m-0 leading-relaxed">
-                      Personalized Style Recommendations
-                    </p>
-                    <button class="cta-button">Read More</button>
+                </div>
+
+                <!-- GROUP 4: FashionAI (Title Index 3) -->
+                <div class="work-item" id="item-8" data-title-index="3">
+                  <div class="w-full relative">
+                    <div class="image-container">
+                      <img
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2000&auto=format&fit=crop"
+                        alt="FashionAI 1"
+                        class="w-full h-full object-cover block"
+                      />
+                    </div>
+                    <div class="mt-6 flex justify-between items-end">
+                      <p
+                        class="w-[70%] text-xl font-normal m-0 leading-relaxed"
+                      >
+                        Personalized Style Recommendations
+                      </p>
+                      <button class="cta-button">Read More</button>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -13,6 +13,9 @@
   .work-item .image-container {
     @apply rounded-2xl w-full overflow-hidden relative aspect-video;
   }
+  .work-item .image-container img{
+    @apply w-full h-full object-cover block;
+  }
   .client-title {
     @apply text-4xl font-bold mb-6 opacity-50 transform scale-90 text-white;
     transition: opacity 0.4s ease, transform 0.4s ease;
