@@ -11,25 +11,59 @@
     />
     <title>Featured AI Work - GSAP Scroll</title>
     <link rel="stylesheet" href="./src/style.css" />
+    
   </head>
   <body>
-    <div
-      class="spacer-section"
-    >
-      Scroll Down
-    </div>
 
+    <canvas id="canvas"></canvas>
+    <div class="spacer-section">Scroll Down</div>
+
+    <!-- Animated Video Section -->
+     
+    <section id="video-panel-section">
+      <div class="about-headers">
+        <div class="animated-h1-container">
+          <h1 id="h1-topline">BEYOND VISIONS</h1>
+        </div>
+        <div class="animated-h1-container">
+          <h1 id="h1-tagline">WITHIN REACH</h1>
+        </div>
+      </div>
+      <div class="about-paragraphs">
+        <p>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Neque senectus
+          sapien cras pharetra orci lorem quam arcu senectus.
+        </p>
+        <p>
+          Aliquam at risus; odio curabitur justo commodo aliquam tristique
+          aenean. Aptent orci aliquam auctor eu metus. Ridiculus risus luctus
+          varius elementum elementum. Nulla massa magnis urna malesuada orci
+          parturient.
+        </p>
+        <p>
+          Nisi finibus magna pellentesque sapien conubia ante consequat morbi
+          at. Ante turpis auctor posuere aptent nostra.
+        </p>
+      </div>
+      <div id="video-panel-start"></div>
+      <div id="video-panel-end-parent">
+        <div id="video-panel-end"></div>
+      </div>
+    </section>
+
+    <!-- Animated Scroll Section -->
     <section>
       <div>
-        <div id="featured-work-section" class="w-full h-full lg:h-screen p-4 md:p-6 lg:p-8">
+        <div
+          id="featured-work-section"
+          class="w-full h-full lg:h-screen p-4 md:p-6 lg:p-8"
+        >
           <div
-            class="bg-black flex flex-col gap-8 lg:gap-4 justify-center items-center overflow-hidden relative rounded-3xl h-full max-w-[1280px] mx-auto pt-6 md:pt-10 lg:pt-14 px-4 md:px-8 lg:px-12"
+            class="flex flex-col gap-8 lg:gap-4 justify-center items-center overflow-hidden relative rounded-3xl h-full max-w-[1280px] mx-auto pt-6 md:pt-10 lg:pt-14 px-4 md:px-8 lg:px-12 bg-black"
           >
             <div class="flex flex-col md:flex-row md:gap-6 lg:gap-1">
               <div class="md:w-1/2">
-                <h2 class="text-white text-[60px]">
-                  Featured AI Work
-                </h2>
+                <h2 class="text-white text-[60px]">Featured AI Work</h2>
               </div>
               <div class="md:w-1/2">
                 <p class="text-white">
@@ -240,9 +274,8 @@
       </div>
     </section>
 
-    <div class="spacer-section">
-      End of Page
-    </div>
+    <div class="spacer-section">End of Page</div>
+    <script type="module" src="./src/index.js"></script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
