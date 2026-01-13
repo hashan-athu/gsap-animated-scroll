@@ -1,6 +1,9 @@
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
+import glsl from "vite-plugin-glsl";
+import wasm from "vite-plugin-wasm";
 
 export default defineConfig({
-  plugins: [tailwindcss()],
+  plugins: [tailwindcss(), wasm(), glsl()],
+  assetsInclude: ["**/*.hdr", "**/*.glb"],
 });
