@@ -34,12 +34,13 @@ class HomeScene {
     initThree = () => {
         const canvas = document.getElementById("canvas");
 
-        this.renderer = new THREE.WebGLRenderer({ antialias: true, canvas, stencil: true });
+        this.renderer = new THREE.WebGLRenderer({ antialias: true, canvas, stencil: true, alpha: true });
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.renderer.setAnimationLoop(this.animate);
         this.renderer.shadowMap.enabled = true;
         this.renderer.shadowMap.type = THREE.PCFShadowMap;
+        this.renderer.setClearColor(0x000000, 0);
 
         this.camera = new THREE.OrthographicCamera();
         this.camera.near = 0;
@@ -50,7 +51,7 @@ class HomeScene {
         this.onScroll();
 
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color(window.getComputedStyle(document.body).backgroundColor);
+        this.scene.background = null;
 
         // new RGBELoader().load(hdr, (texture) => {
         //     texture.mapping = THREE.EquirectangularReflectionMapping;
