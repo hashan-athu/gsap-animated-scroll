@@ -8,6 +8,9 @@
     @apply m-0 overflow-x-hidden;
     font-family: "Poppins", sans-serif;
   }
+  .spacer-section{
+    @apply h-screen flex items-center justify-center text-3xl bg-gray-300 text-black;
+  }
 }
 @layer utilities {
   .primary-button {
