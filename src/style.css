@@ -16,9 +16,19 @@
   .work-item .image-container img {
     @apply w-full h-full object-cover block;
   }
+
+  .titles-column{
+    @apply w-1/2 h-1/2 block relative z-10 my-auto overflow-hidden ;
+  }
+  .titles-column:before{
+    @apply content-[''] absolute top-0 left-0 w-full h-[100px] bg-gradient-to-b from-black to-transparent z-1;
+  }
+  .titles-column:after{
+    @apply content-[''] absolute bottom-0 left-0 w-full h-[100px] bg-gradient-to-t from-black to-transparent z-1;
+  }
   .client-title {
-    @apply text-4xl font-bold mb-6 opacity-50 transform scale-90 text-white;
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    @apply text-4xl font-bold mb-6 text-white;
+    transition: transform 0.4s ease;
     transform-origin: left center;
   }
 
