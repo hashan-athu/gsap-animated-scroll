@@ -10,7 +10,8 @@ const contentColumn = document.querySelector(".content-column");
 const titlesList = document.querySelector(".titles-list");
 const titles = document.querySelectorAll(".client-title");
 const items = document.querySelectorAll(".work-item");
-const titlesColumn = document.querySelector(".titles-column");
+const progressFill = document.querySelector(".progress-fill");
+const titlesColumn = document.querySelector(".titles-wrapper");
 
 // Function to center the active title
 const updateTitles = (index) => {
@@ -134,6 +135,7 @@ tl.eventCallback("onUpdate", () => {
     }
   }
   updateTitles(activeIndex);
+  progressFill.style.width = progress * 100 + "%";
 });
 
 // Remove the individual ScrollTriggers for items
