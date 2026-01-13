@@ -8,12 +8,12 @@
 @layer components {
   /* Custom styles for animations */
   .work-item {
-    @apply h-[80vh] flex items-center flex-shrink-0;
+    @apply flex items-center flex-shrink-0 mb-8;
   }
   .work-item .image-container {
-    @apply rounded-2xl w-full overflow-hidden relative aspect-video;
+    @apply rounded-2xl w-full h-full overflow-hidden relative aspect-video;
   }
-  .work-item .image-container img{
+  .work-item .image-container img {
     @apply w-full h-full object-cover block;
   }
   .client-title {
@@ -25,10 +25,10 @@
   .client-title.active {
     @apply opacity-100;
   }
-  .client-title .heading{
+  .client-title .heading {
     @apply text-2xl leading-8 font-light;
   }
-  .client-title .sub-heading{
+  .client-title .sub-heading {
     @apply text-3xl font-bold;
   }
 
