@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <title>Featured AI Work - GSAP Scroll</title>
@@ -21,10 +21,13 @@
 
     <section>
       <div>
-        <div id="featured-work-section"
+        <div
+          id="featured-work-section"
           class="w-full h-screen flex justify-center items-center bg-black overflow-hidden relative"
         >
-          <div class="flex w-[90%] max-w-[1400px] h-[80vh] relative anim-container">
+          <div
+            class="flex w-[90%] max-w-[1400px] h-[80vh] relative anim-container"
+          >
             <!-- Floating Titles (Left Column) -->
             <div
               class="w-[40%] pr-16 block relative z-10 h-[60vh] overflow-hidden my-auto border-r border-white/10 titles-column"
@@ -34,34 +37,36 @@
               >
                 Featured<br />AI Work
               </h2>
-              <div class="flex flex-col gap-16 absolute top-0 left-0 w-full titles-list">
+              <div
+                class="flex flex-col gap-16 absolute top-0 left-0 w-full titles-list"
+              >
                 <div class="client-title active" data-target="item-1">
-                  <span
-                    class="text-sm uppercase tracking-wider text-gray-400 mb-1 block"
-                    >Music Experience</span
+                  <h3
+                    class="heading"
+                    >Lorem ipsum, dolor sit amet consectetur adipisicing</h3
                   >
-                  <h3 class="text-4xl m-0 font-semibold">Honor</h3>
+                  <span class="sub-heading">Honor</span>
                 </div>
                 <div class="client-title" data-target="item-2">
-                  <span
-                    class="text-sm uppercase tracking-wider text-gray-400 mb-1 block"
-                    >AI Video Generation</span
+                  <h3
+                    class="heading"
+                    >AI Helps Create Realistic B2B Videos in Under a Week</h3
                   >
-                  <h3 class="text-4xl m-0 font-semibold">WUND+</h3>
+                  <span class="sub-heading">WUND+</span>
                 </div>
                 <div class="client-title" data-target="item-3">
-                  <span
-                    class="text-sm uppercase tracking-wider text-gray-400 mb-1 block"
-                    >Finance Education</span
+                  <h3
+                    class="heading"
+                    >Lorem ipsum, dolor sit amet consectetur adipisicing</h3
                   >
-                  <h3 class="text-4xl m-0 font-semibold">Simbiot</h3>
+                  <span class="sub-heading">Simbiot</span>
                 </div>
                 <div class="client-title" data-target="item-4">
-                  <span
-                    class="text-sm uppercase tracking-wider text-gray-400 mb-1 block"
-                    >Retail Tech</span
+                  <h3
+                    class="heading"
+                    >Lorem ipsum, dolor sit amet consectetur adipisicing</h3
                   >
-                  <h3 class="text-4xl m-0 font-semibold">FashionAI</h3>
+                  <span class="sub-heading">FashionAI</span>
                 </div>
               </div>
               <!-- Progress bar could be added here if needed -->
@@ -73,17 +78,13 @@
             >
               <!-- GROUP 1: Honor (Title Index 0) -->
               <!-- Item 1 -->
-              <div
-                class="work-item"
-                id="item-1"
-                data-title-index="0"
-              >
+              <div class="work-item" id="item-1" data-title-index="0">
                 <div class="w-full relative">
                   <div
-                    class="w-full rounded-3xl overflow-hidden relative aspect-video"
+                    class="image-container"
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1614726365723-498aa5988224?q=80&w=2000&auto=format&fit=crop"
+                      src="https://images.unsplash.com/photo-1760708368766-1d36cd72591e?q=80&w=2000&auto=format&fit=crop"
                       alt="Honor 1"
                       class="w-full h-full object-cover block"
                     />
@@ -98,14 +99,10 @@
               </div>
 
               <!-- Item 2 -->
-              <div
-                class="work-item"
-                id="item-2"
-                data-title-index="0"
-              >
+              <div class="work-item" id="item-2" data-title-index="0">
                 <div class="w-full relative">
                   <div
-                    class="w-full rounded-3xl overflow-hidden relative aspect-video"
+                    class="image-container"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop"
@@ -123,14 +120,10 @@
               </div>
 
               <!-- Item 3 -->
-              <div
-                class="work-item"
-                id="item-3"
-                data-title-index="0"
-              >
+              <div class="work-item" id="item-3" data-title-index="0">
                 <div class="w-full relative">
                   <div
-                    class="w-full rounded-3xl overflow-hidden relative aspect-video"
+                    class="image-container"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2000&auto=format&fit=crop"
@@ -148,14 +141,10 @@
               </div>
 
               <!-- Item 4 (Last of Honor) -->
-              <div
-                class="work-item"
-                id="item-4"
-                data-title-index="0"
-              >
+              <div class="work-item" id="item-4" data-title-index="0">
                 <div class="w-full relative">
                   <div
-                    class="w-full rounded-3xl overflow-hidden relative aspect-video"
+                    class="image-container"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2000&auto=format&fit=crop"
@@ -173,14 +162,10 @@
               </div>
 
               <!-- GROUP 2: WUND+ (Title Index 1) -->
-              <div
-                class="work-item"
-                id="item-5"
-                data-title-index="1"
-              >
+              <div class="work-item" id="item-5" data-title-index="1">
                 <div class="w-full relative">
                   <div
-                    class="w-full rounded-3xl overflow-hidden relative aspect-video"
+                    class="image-container"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
@@ -197,14 +182,10 @@
                 </div>
               </div>
 
-              <div
-                class="work-item"
-                id="item-6"
-                data-title-index="1"
-              >
+              <div class="work-item" id="item-6" data-title-index="1">
                 <div class="w-full relative">
                   <div
-                    class="w-full rounded-3xl overflow-hidden relative aspect-video"
+                    class="image-container"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop"
@@ -222,17 +203,13 @@
               </div>
 
               <!-- GROUP 3: Simbiot (Title Index 2) -->
-              <div
-                class="work-item"
-                id="item-7"
-                data-title-index="2"
-              >
+              <div class="work-item" id="item-7" data-title-index="2">
                 <div class="w-full relative">
                   <div
-                    class="w-full rounded-3xl overflow-hidden relative aspect-video"
+                    class="image-container"
                   >
                     <img
-                      src="https://images.unsplash.com/photo-1579621970563-ebec7560eb3e?q=80&w=2000&auto=format&fit=crop"
+                      src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?q=80&w=2000&auto=format&fit=crop"
                       alt="Simbiot 1"
                       class="w-full h-full object-cover block"
                     />
@@ -247,14 +224,10 @@
               </div>
 
               <!-- GROUP 4: FashionAI (Title Index 3) -->
-              <div
-                class="work-item"
-                id="item-8"
-                data-title-index="3"
-              >
+              <div class="work-item" id="item-8" data-title-index="3">
                 <div class="w-full relative">
                   <div
-                    class="w-full rounded-3xl overflow-hidden relative aspect-video"
+                    class="image-container"
                   >
                     <img
                       src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2000&auto=format&fit=crop"

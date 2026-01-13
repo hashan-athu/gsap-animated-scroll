@@ -1,12 +1,17 @@
 @import "tailwindcss";
 @layer base {
-  @apply m-0 overflow-x-hidden;
-  font-family: "Inter", sans-serif;
+  body {
+    @apply m-0 overflow-x-hidden;
+    font-family: "Poppins", sans-serif;
+  }
 }
 @layer components {
   /* Custom styles for animations */
   .work-item {
     @apply h-[80vh] flex items-center flex-shrink-0;
+  }
+  .work-item .image-container {
+    @apply rounded-2xl w-full overflow-hidden relative aspect-video;
   }
   .client-title {
     @apply text-4xl font-bold mb-6 opacity-50 transform scale-90 text-white;
@@ -16,6 +21,12 @@
 
   .client-title.active {
     @apply opacity-100;
+  }
+  .client-title .heading{
+    @apply text-2xl leading-8 font-light;
+  }
+  .client-title .sub-heading{
+    @apply text-3xl font-bold;
   }
 
   .cta-button:hover {
