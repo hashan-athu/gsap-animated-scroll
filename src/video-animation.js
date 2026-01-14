@@ -4,7 +4,7 @@ import { debugGui } from "./debugGui";
 import videoPanelVFrag from "./shaders/videoPanelFrag.glsl";
 import videoPanelVert from "./shaders/videoPanelVert.glsl";
 import { createVideoTexture, elementToLocalRect, elementToWorldRect, getElementPageCoords, pagePixelsToWorldUnit } from "./utils/utils";
-import mp4 from "../assets/pexels-2519660-uhd_3840_2160_24fps.mp4";
+import mp4 from "../assets/homepage-video.mp4";
 
 const PANEL_START_ID = "video-panel-start";
 const PANEL_END_ID = "video-panel-end";
