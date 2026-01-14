@@ -32,7 +32,7 @@ class HomeScene {
     }
 
     initThree = () => {
-        const canvas = document.getElementById("canvas");
+        const canvas = document.getElementById("animated-video-canvas");
 
         this.renderer = new THREE.WebGLRenderer({ antialias: true, canvas, stencil: true, alpha: true });
         this.renderer.setPixelRatio(window.devicePixelRatio);

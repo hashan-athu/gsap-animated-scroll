@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
-:root {
-  --primary-color: #ee6325;
+@theme {
+  --color-enfection-orange: #ee6325;
+  
+  /* Font Sizes */
+  --text-heading-1: 6.25rem;
 }
 @layer base {
   body {
@@ -67,19 +70,20 @@
     background-color: #f44336;
     transform: translateY(-2px);
   }
+
 }
-#canvas {
+/* #canvas {
   position: fixed;
   width: 100vw;
   height: 100vh;
   z-index: -1;
-}
+} */
 #video-panel-section {
-  padding-top: 19vh;
-  padding-bottom: 10vh;
+  /* padding-top: 19vh; */
+  /* padding-bottom: 10vh; */
 
   .about-headers {
-    padding-bottom: 10vh;
+    /* padding-bottom: 10vh; */
 
     .animated-h1-container {
       overflow: hidden;
@@ -143,4 +147,35 @@
       height: 100%;
     }
   }
+}
+
+@keyframes animate-topline {
+    0% {
+        transform: translateY(var(--h1-font-size));
+    }
+
+    40% {
+        transform: translateY(0);
+        transform: translateX(0);
+        margin-left: 0;
+    }
+
+    100% {
+        transform: translateX(-50%);
+        margin-left: 50%;
+    }
+}
+
+@keyframes animate-tagline {
+    0% {
+        transform: translateY(calc(-1 * var(--h1-font-size)));
+    }
+
+    20% {
+        transform: translateY(calc(-1 * var(--h1-font-size)));
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
