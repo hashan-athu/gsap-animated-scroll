@@ -17,6 +17,8 @@ export default class VideoPanelShader extends THREE.Group {
     borderRadius = { value: 0.085 };
     // tintColour = { value: new THREE.Color(0.6, 0.6, 1.0) };
     tintColour = { value: new THREE.Color(0xee6325) };
+    isPlaying = true;
+    isMuted = true;
 
 
     constructor(camera) {
@@ -28,6 +30,8 @@ export default class VideoPanelShader extends THREE.Group {
         this.position.copy(startWorldRect.position);
 
         const videoTexture = createVideoTexture(mp4);
+        // Store reference to the video element for playback control
+        this.videoElement = videoTexture.image;
         const startRectLocal = elementToLocalRect(PANEL_START_ID, this, camera);
         const endRectLocal = elementToLocalRect(PANEL_END_ID, this, camera);
 
@@ -109,4 +113,49 @@ export default class VideoPanelShader extends THREE.Group {
     }
 
     update = () => { }
+
+    /**
+     * Toggle play/pause state of the video
+     * @returns {boolean} New playing state
+     */
+    togglePlayPause = () => {
+        if (!this.videoElement) return this.isPlaying;
+        
+        if (this.isPlaying) {
+            this.videoElement.pause();
+            this.isPlaying = false;
+        } else {
+            this.videoElement.play();
+            this.isPlaying = true;
+        }
+        
+        return this.isPlaying;
+    }
+
+    /**
+     * Set muted state of the video
+     * @param {boolean} muted - Whether to mute the video
+     */
+    setMuted = (muted) => {
+        if (!this.videoElement) return;
+        
+        this.videoElement.muted = muted;
+        this.isMuted = muted;
+    }
+
+    /**
+     * Get current playing state
+     * @returns {boolean} Whether video is playing
+     */
+    getIsPlaying = () => {
+        return this.isPlaying;
+    }
+
+    /**
+     * Get current muted state
+     * @returns {boolean} Whether video is muted
+     */
+    getIsMuted = () => {
+        return this.isMuted;
+    }
 }

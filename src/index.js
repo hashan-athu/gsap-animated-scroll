@@ -9,6 +9,7 @@ import * as THREE from 'three';
 // import ProjectTiles from "./projectTiles";
 import { updateCameraIntrisics } from "./utils/utils";
 import VideoPanelShader from "./video-animation";
+import { initVideoControls, cleanupVideoControls } from "./video-controls";
 
 class HomeScene {
     frustumSize = 10;    // value of 1 results in 1 world space unit equating to height of viewport
@@ -76,6 +77,8 @@ class HomeScene {
         if (window.innerWidth >= 1024) {
             this.videoPanel = new VideoPanelShader(this.camera);
             this.scene.add(this.videoPanel);
+            // Initialize video controls
+            initVideoControls(this.videoPanel);
         }
 
         // this.projectTiles = new ProjectTiles(this);
@@ -103,10 +106,13 @@ class HomeScene {
             // Initialize video panel when resizing to desktop
             this.videoPanel = new VideoPanelShader(this.camera);
             this.scene.add(this.videoPanel);
+            // Initialize video controls
+            initVideoControls(this.videoPanel);
         } else if (!isDesktop && this.videoPanel) {
             // Remove video panel when resizing to mobile/tablet
             this.scene.remove(this.videoPanel);
             window.removeEventListener("scroll", this.videoPanel.onScroll);
+            cleanupVideoControls();
             this.videoPanel = null;
         } else if (this.videoPanel) {
             // Resize existing video panel

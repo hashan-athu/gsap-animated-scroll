@@ -164,6 +164,63 @@
   }
 }
 
+/* Video Controls */
+.video-mute-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.video-mute-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-mute-button:active {
+  transform: scale(0.95);
+}
+
+.video-mute-button .mute-icon {
+  display: block;
+  line-height: 1;
+}
+
+/* Custom cursor for canvas */
+#animated-video-canvas {
+  pointer-events: none; /* Canvas is just for rendering, not interaction */
+}
+
+/* Video Click Overlay for Play/Pause */
+#video-click-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  cursor: pointer;
+  pointer-events: none; /* Don't block clicks by default */
+}
+
+/* Make overlay clickable only when video is in viewport */
+#video-panel-section #video-click-overlay {
+  pointer-events: auto;
+}
+
 @keyframes animate-topline {
     0% {
         transform: translateY(var(--h1-font-size));
