@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { Vector4 } from "three";
-import { debugGui } from "./debugGui";
+// import { debugGui } from "./debugGui";
 import videoPanelVFrag from "./shaders/videoPanelFrag.glsl";
 import videoPanelVert from "./shaders/videoPanelVert.glsl";
 import { createVideoTexture, elementToLocalRect, elementToWorldRect, getElementPageCoords, pagePixelsToWorldUnit } from "./utils/utils";
@@ -15,7 +15,9 @@ const SUBDIVISIONS = 32;
 export default class VideoPanelShader extends THREE.Group {
     animateProgress = { value: 0 };
     borderRadius = { value: 0.085 };
-    tintColour = { value: new THREE.Color(0.6, 0.6, 1.0) };
+    // tintColour = { value: new THREE.Color(0.6, 0.6, 1.0) };
+    tintColour = { value: new THREE.Color(0xee6325) };
+
 
     constructor(camera) {
         super();
@@ -50,7 +52,9 @@ export default class VideoPanelShader extends THREE.Group {
 
         window.addEventListener("scroll", this.onScroll);
 
-        this.initDebug();
+        // if(import.meta.env.DEV_MODE) {
+        //     this.initDebug();
+        // }
     }
 
     calculateElementValues() {
@@ -71,12 +75,12 @@ export default class VideoPanelShader extends THREE.Group {
         this.mesh.position.y = -positionFollowAmount * distanceWorld;
     }
 
-    initDebug = () => {
-        const folder = debugGui.addFolder("Video Panel Shader");
-        folder.add(this.animateProgress, "value", 0, 1).name("Mask progress");
-        folder.add(this.borderRadius, "value", 0, 1).name("Border radius");
-        folder.addColor(this.tintColour, "value").name("Tint colour");
-    }
+    // initDebug = () => {
+    //     const folder = debugGui.addFolder("Video Panel Shader");
+    //     folder.add(this.animateProgress, "value", 0, 1).name("Mask progress");
+    //     folder.add(this.borderRadius, "value", 0, 1).name("Border radius");
+    //     folder.addColor(this.tintColour, "value").name("Tint colour");
+    // }
 
     /**
      * Converts a  height rect to a vec4 (for shader uniforms),

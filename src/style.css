@@ -72,12 +72,27 @@
   }
 
 }
-/* #canvas {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-} */
+
+/* Hide canvas on mobile and tablet */
+@media (max-width: 1023px) {
+  #animated-video-canvas {
+    display: none !important;
+  }
+}
+
+/* Hide animation placeholders on mobile and tablet */
+@media (max-width: 1023px) {
+  #video-panel-start {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  #video-panel-end-parent {
+    display: none;
+  }
+}
+
 #video-panel-section {
   /* padding-top: 19vh; */
   /* padding-bottom: 10vh; */
