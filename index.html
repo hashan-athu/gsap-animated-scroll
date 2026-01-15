@@ -15,40 +15,51 @@
   </head>
   <body>
 
-    <canvas id="canvas"></canvas>
+    <canvas id="animated-video-canvas" class="fixed w-full h-full z-10"></canvas>
     <div class="spacer-section">Scroll Down</div>
 
     <!-- Animated Video Section -->
      
-    <section id="video-panel-section">
-      <div class="about-headers">
-        <div class="animated-h1-container">
-          <h1 id="h1-topline">BEYOND VISIONS</h1>
-        </div>
-        <div class="animated-h1-container">
-          <h1 id="h1-tagline">WITHIN REACH</h1>
+    <section id="video-panel-section" class="mt-24 mb-13">
+    <div class="w-full md:w-9/10 px-6 md:px-0  max-w-[1346px] mx-auto">
+
+      <!-- Main Heading -->
+      <div class="main-heading mb-8 md:mb-12 lg:mb-20 max-w-[1280px] mx-auto">
+        <h1 class="text-5xl md:text-6xl lg:text-heading-1 font-bold lg:leading-[7.75rem]">
+          <span class="inline lg:block">The HumAIn</span>
+          <span class="inline lg:block">Marketing Company</span>
+        </h1>
+      </div>
+
+      <!-- Main Description -->
+      <div class="main-description flex justify-end max-w-[1280px] mx-auto">
+        <div class="w-full lg:w-[40%]">
+          <p class="text-base text-[#212529] mb-8 lg:mb-12">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+          <p>
+            <a href="#" class="primary-button" title="Learn More">Learn More</a>
+          </p>
         </div>
       </div>
-      <div class="about-paragraphs">
-        <p>
-          Lorem ipsum odor amet, consectetuer adipiscing elit. Neque senectus
-          sapien cras pharetra orci lorem quam arcu senectus.
-        </p>
-        <p>
-          Aliquam at risus; odio curabitur justo commodo aliquam tristique
-          aenean. Aptent orci aliquam auctor eu metus. Ridiculus risus luctus
-          varius elementum elementum. Nulla massa magnis urna malesuada orci
-          parturient.
-        </p>
-        <p>
-          Nisi finibus magna pellentesque sapien conubia ante consequat morbi
-          at. Ante turpis auctor posuere aptent nostra.
-        </p>
-      </div>
-      <div id="video-panel-start"></div>
+      <div id="video-panel-start" class="aspect-video w-[55%] -mt-24"></div>
+      
+      <!-- Fallback video for mobile and tablet -->
+      <video 
+        id="fallback-video" 
+        class="lg:hidden w-full aspect-video rounded-2xl mt-12" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+      >
+        <source src="./assets/homepage-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
       <div id="video-panel-end-parent">
         <div id="video-panel-end"></div>
       </div>
+  
+    </div>
     </section>
 
     <!-- Animated Scroll Section -->
@@ -277,5 +288,6 @@
     <div class="spacer-section">End of Page</div>
     <script type="module" src="./src/index.js"></script>
     <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/hero-animation.js"></script>
   </body>
 </html>

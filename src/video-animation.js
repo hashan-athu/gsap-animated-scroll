@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { Vector4 } from "three";
-import { debugGui } from "./debugGui";
+// import { debugGui } from "./debugGui";
 import videoPanelVFrag from "./shaders/videoPanelFrag.glsl";
 import videoPanelVert from "./shaders/videoPanelVert.glsl";
 import { createVideoTexture, elementToLocalRect, elementToWorldRect, getElementPageCoords, pagePixelsToWorldUnit } from "./utils/utils";
-import mp4 from "../assets/pexels-2519660-uhd_3840_2160_24fps.mp4";
+import mp4 from "../assets/homepage-video.mp4";
 
 const PANEL_START_ID = "video-panel-start";
 const PANEL_END_ID = "video-panel-end";
@@ -15,7 +15,11 @@ const SUBDIVISIONS = 32;
 export default class VideoPanelShader extends THREE.Group {
     animateProgress = { value: 0 };
     borderRadius = { value: 0.085 };
-    tintColour = { value: new THREE.Color(0.6, 0.6, 1.0) };
+    // tintColour = { value: new THREE.Color(0.6, 0.6, 1.0) };
+    tintColour = { value: new THREE.Color(0xee6325) };
+    isPlaying = true;
+    isMuted = true;
+
 
     constructor(camera) {
         super();
@@ -26,6 +30,8 @@ export default class VideoPanelShader extends THREE.Group {
         this.position.copy(startWorldRect.position);
 
         const videoTexture = createVideoTexture(mp4);
+        // Store reference to the video element for playback control
+        this.videoElement = videoTexture.image;
         const startRectLocal = elementToLocalRect(PANEL_START_ID, this, camera);
         const endRectLocal = elementToLocalRect(PANEL_END_ID, this, camera);
 
@@ -50,7 +56,9 @@ export default class VideoPanelShader extends THREE.Group {
 
         window.addEventListener("scroll", this.onScroll);
 
-        this.initDebug();
+        // if(import.meta.env.DEV_MODE) {
+        //     this.initDebug();
+        // }
     }
 
     calculateElementValues() {
@@ -71,12 +79,12 @@ export default class VideoPanelShader extends THREE.Group {
         this.mesh.position.y = -positionFollowAmount * distanceWorld;
     }
 
-    initDebug = () => {
-        const folder = debugGui.addFolder("Video Panel Shader");
-        folder.add(this.animateProgress, "value", 0, 1).name("Mask progress");
-        folder.add(this.borderRadius, "value", 0, 1).name("Border radius");
-        folder.addColor(this.tintColour, "value").name("Tint colour");
-    }
+    // initDebug = () => {
+    //     const folder = debugGui.addFolder("Video Panel Shader");
+    //     folder.add(this.animateProgress, "value", 0, 1).name("Mask progress");
+    //     folder.add(this.borderRadius, "value", 0, 1).name("Border radius");
+    //     folder.addColor(this.tintColour, "value").name("Tint colour");
+    // }
 
     /**
      * Converts a  height rect to a vec4 (for shader uniforms),
@@ -105,4 +113,49 @@ export default class VideoPanelShader extends THREE.Group {
     }
 
     update = () => { }
+
+    /**
+     * Toggle play/pause state of the video
+     * @returns {boolean} New playing state
+     */
+    togglePlayPause = () => {
+        if (!this.videoElement) return this.isPlaying;
+        
+        if (this.isPlaying) {
+            this.videoElement.pause();
+            this.isPlaying = false;
+        } else {
+            this.videoElement.play();
+            this.isPlaying = true;
+        }
+        
+        return this.isPlaying;
+    }
+
+    /**
+     * Set muted state of the video
+     * @param {boolean} muted - Whether to mute the video
+     */
+    setMuted = (muted) => {
+        if (!this.videoElement) return;
+        
+        this.videoElement.muted = muted;
+        this.isMuted = muted;
+    }
+
+    /**
+     * Get current playing state
+     * @returns {boolean} Whether video is playing
+     */
+    getIsPlaying = () => {
+        return this.isPlaying;
+    }
+
+    /**
+     * Get current muted state
+     * @returns {boolean} Whether video is muted
+     */
+    getIsMuted = () => {
+        return this.isMuted;
+    }
 }
