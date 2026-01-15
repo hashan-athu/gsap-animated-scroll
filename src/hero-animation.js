@@ -5,7 +5,7 @@ export function initHeroAnimation() {
   const headingContainer = document.querySelector(".main-heading h1");
   if (!headingContainer) return;
 
-  const lines = headingContainer.querySelectorAll("span.block");
+  const lines = headingContainer.querySelectorAll("span");
   if (lines.length < 2) return;
 
   const line1 = lines[0];
